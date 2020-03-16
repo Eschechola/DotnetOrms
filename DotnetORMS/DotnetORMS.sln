@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{26DD4522-2FFF-40A3-B1D8-71706A810C13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{19172CAE-EDD4-407E-8EF4-13F9A2E9D277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetORMS", "DotnetORMS\DotnetORMS.csproj", "{99C0B08A-55AC-4DB5-A699-6E97EA0A52E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{58977ECD-D2BD-4F58-9E13-D6BEE23BBDD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataReader", "DataReader", "{1ED030E9-D25C-40F0-960A-7A3608AE0DE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{0F441786-542C-4CFB-8ADE-6B07F509B50A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate", "NHibernate", "{FD456A8F-80A5-421F-8410-72D1E920DED1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99C0B08A-55AC-4DB5-A699-6E97EA0A52E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C0B08A-55AC-4DB5-A699-6E97EA0A52E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C0B08A-55AC-4DB5-A699-6E97EA0A52E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C0B08A-55AC-4DB5-A699-6E97EA0A52E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99C0B08A-55AC-4DB5-A699-6E97EA0A52E3} = {26DD4522-2FFF-40A3-B1D8-71706A810C13}
+		{58977ECD-D2BD-4F58-9E13-D6BEE23BBDD0} = {19172CAE-EDD4-407E-8EF4-13F9A2E9D277}
+		{1ED030E9-D25C-40F0-960A-7A3608AE0DE1} = {19172CAE-EDD4-407E-8EF4-13F9A2E9D277}
+		{0F441786-542C-4CFB-8ADE-6B07F509B50A} = {19172CAE-EDD4-407E-8EF4-13F9A2E9D277}
+		{FD456A8F-80A5-421F-8410-72D1E920DED1} = {19172CAE-EDD4-407E-8EF4-13F9A2E9D277}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15C90A8B-54DE-4B39-91FF-F6D3A9CB76CE}
+	EndGlobalSection
+EndGlobal
