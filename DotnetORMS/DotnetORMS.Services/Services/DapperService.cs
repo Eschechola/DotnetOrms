@@ -1,35 +1,35 @@
-﻿using DotnetORMS.Interfaces;
+﻿using DotnetORMS.Infra.Dapper.Repository;
+using DotnetORMS.Interfaces;
 using DotnetORMS.Models;
-using System;
 using System.Collections.Generic;
 
 namespace DotnetORMS.Services
 {
     public class DapperService : IService
     {
+        public void Insert(User obj)
+        {
+            new DapperRepository().Insert(obj);
+        }
+
+        public void Update(User obj)
+        {
+            new DapperRepository().Update(obj);
+        }
+
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            new DapperRepository().Delete(id);
         }
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            return new DapperRepository().Get(id);
         }
 
         public IList<User> GetAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(User user)
-        {
-            throw new NotImplementedException();
+            return new DapperRepository().GetAll();
         }
     }
 }

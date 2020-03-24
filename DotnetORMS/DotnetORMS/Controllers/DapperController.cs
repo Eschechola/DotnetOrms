@@ -33,7 +33,7 @@ namespace DotnetORMS.Controllers
         }
 
         [HttpPut]
-        [Route("insert")]
+        [Route("update")]
         public IActionResult Update([FromBody] User user)
         {
             try
