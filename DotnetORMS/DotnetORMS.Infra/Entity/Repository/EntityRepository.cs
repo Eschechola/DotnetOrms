@@ -10,9 +10,9 @@ namespace DotnetORMS.Infra.Entity.Repository
     {
         private readonly EntityContext Context;
 
-        public EntityRepository()
+        public EntityRepository(EntityContext _context)
         {
-            Context = new EntityContext();
+            Context = _context;
         }
 
         public void Insert(User user)

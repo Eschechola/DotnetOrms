@@ -12,9 +12,9 @@ namespace DotnetORMS.Controllers
     {
         private readonly IService Service;
         
-        public DataReaderController()
+        public DataReaderController(DataReaderService _service)
         {
-            Service = new DataReaderService();
+            Service = _service;
         }
 
         [HttpPost]

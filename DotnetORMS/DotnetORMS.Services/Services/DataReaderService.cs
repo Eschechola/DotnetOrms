@@ -1,4 +1,5 @@
-﻿using DotnetORMS.Interfaces;
+﻿using DotnetORMS.Infra.DataReader.Repository;
+using DotnetORMS.Interfaces;
 using DotnetORMS.Models;
 using System;
 using System.Collections.Generic;
@@ -7,29 +8,36 @@ namespace DotnetORMS.Services
 {
     public class DataReaderService : IService
     {
+        private readonly DataReaderRepository Repository;
+
+        public DataReaderService(DataReaderRepository _repository)
+        {
+            Repository = _repository;
+        }
+
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Repository.Delete(id);
         }
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            return Repository.Get(id);
         }
 
         public IList<User> GetAll()
         {
-            throw new NotImplementedException();
+            return Repository.GetAll();
         }
 
         public void Insert(User user)
         {
-            throw new NotImplementedException();
+            Repository.Insert(user);
         }
 
         public void Update(User user)
         {
-            throw new NotImplementedException();
+            Repository.Update(user);
         }
     }
 }

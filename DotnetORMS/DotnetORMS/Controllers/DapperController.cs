@@ -12,9 +12,9 @@ namespace DotnetORMS.Controllers
     {
         private readonly IService Service;
 
-        public DapperController()
+        public DapperController(DapperService service)
         {
-            Service = new DapperService();
+            Service = service;
         }
 
         [HttpPost]

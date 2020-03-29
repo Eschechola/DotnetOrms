@@ -7,9 +7,9 @@ namespace DotnetORMS.Infra.DI.Settings
 {
     public class Injection
     {
-        private static IConfigurationRoot _config = null;
+        private static IConfiguration _config = null;
 
-        public static IConfigurationRoot Configuration
+        public static IConfiguration Configuration
         {
             get
             {
@@ -22,7 +22,7 @@ namespace DotnetORMS.Infra.DI.Settings
             }
         }
 
-        private static IConfigurationRoot InjectSettings()
+        private static IConfiguration InjectSettings()
         {
             try
             {

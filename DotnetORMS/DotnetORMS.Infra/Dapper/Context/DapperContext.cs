@@ -1,26 +1,21 @@
-﻿using DotnetORMS.Infra.DI.Settings;
-using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using System;
+﻿using Microsoft.Data.SqlClient;
 
 namespace DotnetORMS.Infra.Dapper.Context
 {
     public class DapperContext
     {
+        private string ConnectionString;
         public SqlConnection Connection
-        {
-            get
+        { 
+            get 
             {
-                return new SqlConnection(Configuration["ConnectionStrings:SqlServer"]);
+                return new SqlConnection(ConnectionString);
             }
         }
 
-        private IConfiguration Configuration { get; set; }
-
-
-        public DapperContext()
+        public DapperContext(string connectionString)
         {
-            Configuration = Injection.Configuration;
+            ConnectionString = connectionString;
         }
     }
 }

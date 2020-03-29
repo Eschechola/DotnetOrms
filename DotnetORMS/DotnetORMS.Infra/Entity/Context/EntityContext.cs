@@ -7,11 +7,11 @@ namespace DotnetORMS.Infra.Entity.Context
 {
     public partial class EntityContext : DbContext
     {
-        private readonly IConfiguration Configuration;
+        private string ConnectionString;
 
-        public EntityContext()
+        public EntityContext(string connectionString)
         {
-            Configuration = Injection.Configuration;
+            ConnectionString = connectionString;
         }
 
         public EntityContext(DbContextOptions<EntityContext> options): base(options)
@@ -24,7 +24,7 @@ namespace DotnetORMS.Infra.Entity.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(Configuration["ConnectionStrings:SqlServer"]);
+                optionsBuilder.UseSqlServer(ConnectionString);
             }
         }
 

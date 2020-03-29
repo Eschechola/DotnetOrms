@@ -7,29 +7,36 @@ namespace DotnetORMS.Services
 {
     public class DapperService : IService
     {
+        private readonly DapperRepository Repository;
+
+        public DapperService(DapperRepository _repository)
+        {
+            Repository = _repository;
+        }
+
         public void Insert(User obj)
         {
-            new DapperRepository().Insert(obj);
+            Repository.Insert(obj);
         }
 
         public void Update(User obj)
         {
-            new DapperRepository().Update(obj);
+            Repository.Update(obj);
         }
 
         public void Delete(int id)
         {
-            new DapperRepository().Delete(id);
+            Repository.Delete(id);
         }
 
         public User Get(int id)
         {
-            return new DapperRepository().Get(id);
+            return Repository.Get(id);
         }
 
         public IList<User> GetAll()
         {
-            return new DapperRepository().GetAll();
+            return Repository.GetAll();
         }
     }
 }

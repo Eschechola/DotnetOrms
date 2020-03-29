@@ -10,11 +10,11 @@ namespace DotnetORMS.Infra.Dapper.Repository
 {
     public class DapperRepository : IDisposable
     {
-        DapperContext Context;
+        private readonly DapperContext Context;
 
-        public DapperRepository()
+        public DapperRepository(DapperContext _context)
         {
-            Context = new DapperContext();
+            Context = _context;
         }
 
         public void Insert(User user)

@@ -7,29 +7,36 @@ namespace DotnetORMS.Services
 {
     public class EntityService : IService
     {
+        private readonly EntityRepository Repository;
+
+        public EntityService(EntityRepository _repository)
+        {
+            Repository = _repository;
+        }
+
         public void Insert(User obj)
         {
-            new EntityRepository().Insert(obj);
+            Repository.Insert(obj);
         }
 
         public void Update(User obj)
         {
-            new EntityRepository().Update(obj);
+            Repository.Update(obj);
         }
 
         public void Delete(int id)
         {
-            new EntityRepository().Delete(id);
+            Repository.Delete(id);
         }
 
         public User Get(int id)
         {
-            return new EntityRepository().Get(id);
+            return Repository.Get(id);
         }
 
         public IList<User> GetAll()
         {
-            return new EntityRepository().GetAll();
+            return Repository.GetAll();
         }
     }
 }

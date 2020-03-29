@@ -12,9 +12,9 @@ namespace DotnetORMS.Controllers
     {
         private readonly IService Service;
 
-        public EntityController()
+        public EntityController(EntityService _service)
         {
-            Service = new EntityService();
+            Service = _service;
         }
 
         [HttpPost]
